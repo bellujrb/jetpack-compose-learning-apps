@@ -7,15 +7,16 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import dev.bellu.dessertrelease.data.LocalDessertReleaseData
+import dev.bellu.dessertrelease.data.db.LocalDessertReleaseData
+import dev.bellu.dessertrelease.data.store.UserPreferenceStore
 import dev.bellu.dessertrelease.presentation.components.CardCube
 import dev.bellu.dessertrelease.presentation.components.CardRectangle
 import dev.bellu.dessertrelease.presentation.utils.Colors
@@ -24,7 +25,9 @@ import dev.bellu.dessertrelease.presentation.viewmodels.HomeViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(viewModel: HomeViewModel = HomeViewModel()) {
+fun HomeScreen(viewModel: HomeViewModel = HomeViewModel(
+    userPreferenceStore = UserPreferenceStore(context = LocalContext.current)
+)) {
 
     val uiState = viewModel.uiState.collectAsState()
     val versions = LocalDessertReleaseData.dessertReleases

@@ -1,4 +1,4 @@
-package dev.bellu.dessertrelease.data
+package dev.bellu.dessertrelease.data.db
 
 object LocalDessertReleaseData {
     val dessertReleases = listOf(
