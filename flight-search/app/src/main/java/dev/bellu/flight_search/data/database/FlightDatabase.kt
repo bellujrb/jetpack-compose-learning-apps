@@ -14,13 +14,13 @@ abstract class FlightDatabase: RoomDatabase(){
 
     companion object{
         fun getDatabase(context: Context): FlightDatabase{
-            return Room.databaseBuilder(
-                name = "flight_search.db",
-                klass = FlightDatabase::class.java,
-                context = context
-            )
-                .fallbackToDestructiveMigration()
-                .build()
+                return Room.databaseBuilder(
+                    name = "flight_search.db",
+                    klass = FlightDatabase::class.java,
+                    context = context
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
+            }
         }
-    }
 }
