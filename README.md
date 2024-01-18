@@ -11,3 +11,4 @@
 |  [unscramble-game](https://github.com/bellujrb/jetpack-compose-learning-apps/tree/main/unscramble-game) | KOTLIN, JETPACK COMPOSE, VIEWMODEL | 100% concluded
 |  [bitcoin-watch](https://github.com/bellujrb/jetpack-compose-learning-apps/tree/main/bitcoin-watch) | KOTLIN, JETPACK COMPOSE, VIEWMODEL, ROOM| 100% concluded
 |  [inventory-app](https://github.com/bellujrb/jetpack-compose-learning-apps/tree/main/inventoryapp) | KOTLIN, JETPACK COMPOSE, VIEWMODEL, SQL | 100% concluded
+|  [dessert-release](https://github.com/bellujrb/jetpack-compose-learning-apps/tree/main/dessert-release) | KOTLIN, JETPACK COMPOSE, VIEWMODEL, DATASTORE | 25% concluded
