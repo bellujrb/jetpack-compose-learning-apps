@@ -24,7 +24,6 @@ import kotlinx.coroutines.launch
 fun HomeScreen(viewModel: HomeViewModel = HomeViewModel(
     db = FlightDatabase.getDatabase(
         context = LocalContext.current,
-        databasePath = "flight_search.db"
     )
 )
 ){
