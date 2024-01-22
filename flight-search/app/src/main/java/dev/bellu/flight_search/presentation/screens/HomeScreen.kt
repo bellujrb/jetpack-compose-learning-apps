@@ -17,18 +17,18 @@ import dev.bellu.flight_search.presentation.utils.TextManager
 import dev.bellu.flight_search.R
 import dev.bellu.flight_search.data.database.FlightDatabase
 import dev.bellu.flight_search.presentation.viewmodel.HomeViewModel
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(viewModel: HomeViewModel = HomeViewModel(
-    db = FlightDatabase.getDatabase(
-        context = LocalContext.current,
-    )
+    db = FlightDatabase.getDatabase(context = LocalContext.current)
 )
 ){
 
     val scope = rememberCoroutineScope()
+
     LaunchedEffect(key1 = null){
         scope.launch {
             viewModel.fetchDataFromDatabase()

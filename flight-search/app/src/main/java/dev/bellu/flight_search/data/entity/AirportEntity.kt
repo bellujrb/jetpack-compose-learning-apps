@@ -10,12 +10,12 @@ data class AirportEntity(
     @ColumnInfo(name = "id")
     val id: Int,
 
-    @ColumnInfo(name = "iata_code")
-    val iataCode: String,
-
     @ColumnInfo(name = "name")
     val name: String,
 
-    @ColumnInfo(name = "passangers")
-    val passangers: Int
+    @ColumnInfo(name = "iata_code")
+    val iataCode: String,
+
+    @ColumnInfo(name = "passengers")
+    val passengers: Int
 )

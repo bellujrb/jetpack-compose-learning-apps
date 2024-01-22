@@ -3,4 +3,10 @@
     <string name="title">Flight Search</string>
     <string name="input_title">Search</string>
     <string name="input_placeholder">Search for Flight</string>
+
+    <string name="code_svo">SVO</string>
+    <string name="name_svo">Sheremetyevo - A.S. Pushkin Internacional</string>
+
+    <string name="code_muc">MUC</string>
+    <string name="name_muc">Munich International Airport</string>
 </resources>
