@@ -31,7 +31,6 @@ fun HomeScreen(
     ),
 ) {
     val uiState: State<HomeUiState> = viewModel.uiState.collectAsState()
-    val scope = rememberCoroutineScope()
     var inputSearch by remember { mutableStateOf("") }
 
     Scaffold(
@@ -67,12 +66,21 @@ fun HomeScreen(
                     LazyColumn(
                         content = {
                             val flights = uiState.value.flights
-                            items(flights.size) { index ->
+                            val filteredFlights = if (inputSearch.isEmpty()) {
+                                flights
+                            } else {
+                                flights.filter { flight ->
+                                    flight.departCode.contains(inputSearch, ignoreCase = true) ||
+                                            flight.arriveCode.contains(inputSearch, ignoreCase = true)
+                                }
+                            }
+
+                            items(filteredFlights.size) { index ->
                                 FlightComponent(flights = FlightEntity(
-                                    departName = flights[index].departName,
-                                    departCode = flights[index].departCode,
-                                    arriveName = flights[index].arriveName,
-                                    arriveCode = flights[index].arriveCode
+                                    departName = filteredFlights[index].departName,
+                                    departCode = filteredFlights[index].departCode,
+                                    arriveName = filteredFlights[index].arriveName,
+                                    arriveCode = filteredFlights[index].arriveCode
                                 ))
                             }
                         }
