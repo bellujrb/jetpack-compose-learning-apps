@@ -4,6 +4,9 @@
     <string name="input_title">Search</string>
     <string name="input_placeholder">Search for Flight</string>
 
+    <string name="depart">DEPART</string>
+    <string name="arrive">ARRIVE</string>
+
     <string name="code_svo">SVO</string>
     <string name="name_svo">Sheremetyevo - A.S. Pushkin Internacional</string>
 

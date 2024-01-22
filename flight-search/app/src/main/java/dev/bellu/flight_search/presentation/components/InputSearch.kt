@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import dev.bellu.flight_search.presentation.utils.Colors
 
 @Composable
-fun InputSearch(label: String, placeholder: String, inputSearch: String, onValueChange: () -> Unit) {
+fun InputSearch(label: String, placeholder: String, inputSearch: String, onValueChange: (String) -> Unit) {
 
     OutlinedTextField(
         label = {
@@ -26,7 +26,7 @@ fun InputSearch(label: String, placeholder: String, inputSearch: String, onValue
         },
         value = inputSearch,
         onValueChange = {
-            onValueChange()
+            newText -> onValueChange(newText)
         },
         leadingIcon = {
             Icon(
