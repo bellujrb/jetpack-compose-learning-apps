@@ -9,4 +9,22 @@
 
     <string name="code_muc">MUC</string>
     <string name="name_muc">Munich International Airport</string>
+
+    <string name="code_dus">DUS</string>
+    <string name="name_dus">Düsseldorf International Airport</string>
+
+    <string name="code_ath">ATH</string>
+    <string name="name_ath">Athens International Airport</string>
+
+    <string name="code_lys">LYS</string>
+    <string name="name_lys">Lyon-Saint Exupéry Airport</string>
+
+    <string name="code_fco">FCO</string>
+    <string name="name_fco">Leonardo da Vinci International Airport</string>
+
+    <string name="code_vie">VIE</string>
+    <string name="name_vie">Vienna International Airport</string>
+
+    <string name="code_kef">KEF</string>
+    <string name="name_kef">Keflavík International Airport</string>
 </resources>
