@@ -29,12 +29,6 @@ fun HomeScreen(viewModel: HomeViewModel = HomeViewModel(
     val scope = rememberCoroutineScope()
     var inputSearch by remember { mutableStateOf("") }
 
-    LaunchedEffect(key1 = null){
-        scope.launch {
-            viewModel.fetchDataFromDatabase()
-        }
-    }
-
     Scaffold(
         topBar = {
             TopAppBar(
